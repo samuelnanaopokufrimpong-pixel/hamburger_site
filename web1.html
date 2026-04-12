@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Delivery Website</title>
+<link rel="icon" type="image/png" href="burger_icon.png">
+<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<!-- Hamburger -->
+<div class="menu-icon" onclick="openMenu()">☰</div>
+
+<!-- Top-right buttons -->
+<div class="top-buttons">
+    <button class="top-btn" onclick="openCreateAccount()">Create Account</button>
+    <button class="top-btn" onclick="openMenu()">Sign Up / Login</button>
+</div>
+
+<!-- Menu -->
+<div class="menu" id="menu">
+    <div class="close-btn" onclick="closeMenu()">✖</div>
+    <h2>User Details</h2>
+    <form onsubmit="goToNextPage(event)">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <select id="region" onchange="updateCities()" required>
+            <option value="">Select Region</option>
+            <option value="greaterAccra">Greater Accra</option>
+            <option value="ashanti">Ashanti</option>
+            <option value="northern">Northern</option>
+            <option value="eastern">Eastern</option>
+            <option value="central">Central</option>
+            <option value="western">Western</option>
+            <option value="westernNorth">Western North</option>
+            <option value="volta">Volta</option>
+            <option value="oti">Oti</option>
+            <option value="savannah">Savannah</option>
+            <option value="northEast">North East</option>
+            <option value="upperEast">Upper East</option>
+            <option value="upperWest">Upper West</option>
+            <option value="bono">Bono</option>
+            <option value="bonoEast">Bono East</option>
+            <option value="ahafo">Ahafo</option>
+        </select>
+
+        <select id="city" required>
+            <option value="">Select City</option>
+        </select>
+
+        <input type="text" placeholder="Street / Location" required>
+        <button type="submit">Continue</button>
+    </form>
+</div>
+
+<!-- Main Page -->
+<div class="content">
+    <h2 class="hero-text">
+        Welcome to burger services — we make burgers to die for
+    </h2>
+</div>
+
+<!-- Cities Near Me Map -->
+<div class="map-container">
+    <h2>📍 Cities Near Me</h2>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3979.601603454458!2d-0.186964!3d5.603717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgh!4v1690000000000!5m2!1sen!2sgh"
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+</div>
+
+<!-- Regions and Cities -->
+<div class="region-cities">
+    <h2>📍 Available Regions & Cities in Ghana</h2>
+    <p>We currently deliver to the following regions and cities:</p>
+    <ul id="allCitiesList"></ul>
+</div>
+
+<footer class="site-footer">
+    <p>&copy; 2026 Burger Services. All rights reserved.</p>
+</footer>
+
+<script src="script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food App</title>
+<!-- favicon   -->
+<link rel="icon" type="image/png" href="burger_icon.png">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- External CSS -->
+<link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-left">
+      <!-- Hamburger button -->
+    <div class="hamburger-btn" onclick="toggleOverlayMenu()">
+      <i class="fa fa-bars"></i>
+    </div>
+    <!-- logo -->
+    <div class="logo">Foodie</div>
+    
+    
+  <!-- navbar links -->
+    <div class="nav-links">
+      <a href="web1.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="web4.html">Orders</a>
+    </div>
+  </div>
+
+  <div class="cart">
+    🛒 Cart: <span id="cartCount">0</span>
+  </div>
+</div>
+
+<!-- OVERLAY MENU -->
+<div id="overlayMenu" class="overlay-menu">
+  <div class="overlay-header">
+    <i class="fa fa-times" onclick="toggleOverlayMenu()"></i>
+    <h2>Menu</h2>
+  </div>
+
+  <div class="overlay-content">
+    <a href="web1.html">Home</a>
+    <a href="web4.html">Orders</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Top -->
+  <div class="top">
+    <div class="delivery">
+      <p>Deliver to</p>
+      <div class="region-dropdown">
+        <h4 id="selectedRegion">Greater Accra <i class="fa fa-chevron-down"></i></h4>
+        <ul>
+          <li onclick="selectRegion(this)">Greater Accra</li>
+          <li onclick="selectRegion(this)">Ashanti</li>
+          <li onclick="selectRegion(this)">Western</li>
+          <li onclick="selectRegion(this)">Eastern</li>
+          <li onclick="selectRegion(this)">Central</li>
+          <li onclick="selectRegion(this)">Volta</li>
+          <li onclick="selectRegion(this)">Northern</li>
+          <li onclick="selectRegion(this)">Upper East</li>
+          <li onclick="selectRegion(this)">Upper West</li>
+          <li onclick="selectRegion(this)">Bono</li>
+          <li onclick="selectRegion(this)">Bono East</li>
+          <li onclick="selectRegion(this)">Ahafo</li>
+          <li onclick="selectRegion(this)">Western North</li>
+          <li onclick="selectRegion(this)">Oti</li>
+          <li onclick="selectRegion(this)">Savannah</li>
+          <li onclick="selectRegion(this)">North East</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+ <div class="bell">
+      <i class="fa fa-bell"></i>
+    </div>
+  
+
+  <!-- Search -->
+  <div class="search-box">
+    <i class="fa fa-search"></i>
+    <input type="text" placeholder="Search food..." onkeyup="searchFood(this.value)">
+  </div>
+
+  <!-- Food Grid -->
+   <div class="food-grid" id="foodGrid">
+    
+    <div class="food" onclick="addToCart('Chicken Burger')">
+      <img src="Chicken burger.jpg">
+      <p>Chicken Burger</p>
+    </div>
+
+    <div class="food" onclick="addToCart('Beef Burger')">
+      <img src="beefburger.jpg">
+      <p>Beef Burger</p>
+    </div>
+    <div class="food" onclick="addToCart('Sandwich')">
+      <img src="sandwich.jpg">
+      <p>Sandwich</p>
+    </div>
+    <div class="food" onclick="addToCart('Hamburger')">
+      <img src="hamburger.jpg">
+      <p>Hamburger</p>
+    </div>
+    <div class="food" onclick="addToCart('Wraps')">
+      <img src="wrap.jpg">
+      <p>Wraps</p>
+    </div>
+    <div class="food" onclick="addToCart('Cheese Burger')">
+      <img src="cheeseburger.jpg">
+      <p>Cheese Burger</p>
+    </div>
+  </div>
+</div>
+
+<!-- External JS -->
+<script src="script3.js"></script>
+
+</body>
+</html>

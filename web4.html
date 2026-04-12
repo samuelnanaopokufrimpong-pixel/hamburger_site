@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Order</title>
+
+<link rel="icon" type="image/png" href="burger_icon.png">
+
+<!-- LINK CSS -->
+<link rel="stylesheet" href="style4.css">
+</head>
+
+<body>
+<body>
+    <!-- Navigation Bar -->
+
+    <div class="container">
+        <!-- ...rest of your page content... -->
+    <!-- Cart Bar -->
+<div id="cartBar" style="display:flex; justify-content:space-between; align-items:center; background:#ff9800; color:white; padding:15px 30px; font-weight:bold; cursor:pointer;">
+    <div>
+        🛒 <span id="cartCount">0</span> items - $<span id="cartTotal">0.00</span>
+    </div>
+    <div>View Cart / Checkout</div>
+    <!-- Checkout Modal -->
+<div class="modal" id="checkoutModal">
+    <div class="modal-content">
+        <h2>Your Cart</h2>
+        <ul id="checkoutItems" style="list-style:none; padding:0; margin:0 0 15px 0;"></ul>
+        <div style="font-weight:bold; margin-bottom:15px;">
+            Total: $<span id="checkoutTotal">0.00</span>
+        </div>
+        <button class="pay-btn" id="proceedToPay">Proceed to Payment</button>
+    </div>
+</div>
+</div>
+<div class="container">
+    <div class="header">
+        <h1>Deliver to</h1>
+        <select id="regionSelect">
+            <option value="">Select Region</option>
+            <option value="Greater Accra">Greater Accra</option>
+            <option value="Ashanti">Ashanti</option>
+            <option value="Eastern">Eastern</option>
+            <option value="Central">Central</option>
+            <option value="Western">Western</option>
+            <option value="Western North">Western North</option>
+            <option value="Volta">Volta</option>
+            <option value="Oti">Oti</option>
+            <option value="Northern">Northern</option>
+            <option value="Savannah">Savannah</option>
+            <option value="North East">North East</option>
+            <option value="Upper East">Upper East</option>
+            <option value="Upper West">Upper West</option>
+            <option value="Bono">Bono</option>
+            <option value="Bono East">Bono East</option>
+            <option value="Ahafo">Ahafo</option>
+        </select>
+        <select id="citySelect">
+            <option>Select City/Town</option>
+        </select>
+        <input type="text" placeholder="Search menu..." class="search" id="searchMenu">
+    </div>
+
+    <!-- Menu Items -->
+    <div class="menu-item">
+        <img src="Chicken burger.jpg" alt="Chicken Burger">
+        <div class="item-info">
+            <h3>Chicken Burger</h3>
+            <p class="price">$5.00</p>
+            <button class="order-btn">Order</button>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="sandwich.jpg" alt="Sandwich">
+        <div class="item-info">
+            <h3>Sandwich</h3>
+            <p>Egg, Beef, Vegetables, Sauce</p>
+            <p class="price">$5.95</p>
+            <button class="order-btn">Order</button>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="hamburger.jpg" alt="Hamburger">
+        <div class="item-info">
+            <h3>Hamburger</h3>
+            <p>Beef, Lettuce, Tomato, Onion</p>
+            <p class="price">$6.75</p>
+            <button class="order-btn">Order</button>
+        </div>
+    </div>
+    <div class="menu-item">
+        <img src="cheeseburger.jpg" alt="Cheese Burger">
+        <div class="item-info">
+            <h3>Cheese Burger</h3>
+            <p>Beef, Cheese, Lettuce, Tomato</p>
+            <p class="price">$7.50</p>
+            <button class="order-btn">Order</button>
+        </div>
+    </div>
+    <div class="menu-item">
+        <img src="beefburger.jpg" alt="Beef Burger">
+        <div class="item-info">
+            <h3>Beef Burger</h3>
+            <p>Beef, Lettuce, Tomato, Onion</p>
+            <p class="price">$6.75</p>
+            <button class="order-btn">Order</button>
+        </div>
+    </div>
+    <div class="menu-item">
+        <img src="wrap.jpg" alt="Wraps">
+        <div class="item-info">
+            <h3>Wraps</h3>
+            <p>Chicken, Vegetables, Sauce</p>
+            <p class="price">$6.00</p>
+            <button class="order-btn">Order</button>
+        </div>
+    </div>
+</div>
+
+<!-- Payment Modal -->
+<div class="modal" id="paymentModal">
+    <div class="modal-content">
+        <h2>Enter Mobile Money / Telecel Number & PIN</h2>
+        <div class="payment-logos">
+            <img src="mtn-logo.png" alt="MTN">
+            <img src="telecel-logo.png" alt="Telecel">
+        </div>
+        <input type="text" id="accountInput" placeholder="Mobile Money / Telecel Number">
+        <input type="password" id="pinInput" placeholder="Enter PIN">
+        <button class="pay-btn" id="confirmPay">Pay</button>
+
+        <div class="success-message" id="successMessage">
+            <div class="success-circle">✔</div>
+            <div>Order Placed Successfully!</div>
+        </div>
+    </div>
+</div>
+
+<!-- LINK JAVASCRIPT -->
+<script src="script4.js"></script>
+
+</body>
+</html>
